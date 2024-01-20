@@ -1,0 +1,56 @@
+{
+  "name": "koishi-plugin-theme-neonheart",
+  "description": "NeonHeart theme for Koishi console",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "dist"
+  ],
+  "author": "Vince G",
+  "scripts": {
+    "build": "tsc -b && koishi-console build"
+  },
+  "license": "AGPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vincent-the-gamer/koishi-plugin-theme-neonheart.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Vincent-the-gamer/koishi-plugin-theme-neonheart/issues"
+  },
+  "homepage": "https://github.com/Vincent-the-gamer/koishi-plugin-theme-neonheart",
+  "keywords": [
+    "bot",
+    "chatbot",
+    "koishi",
+    "plugin",
+    "webui",
+    "console"
+  ],
+  "koishi": {
+    "description": {
+      "en": "Neonheart theme for Koishi console",
+      "zh": "专为Koishi控制台制作的NeonHeart主题"
+    },
+    "services": {
+      "required": [
+        "console"
+      ]
+    }
+  },
+  "peerDependencies": {
+    "@koishijs/plugin-console": "^5.25.6",
+    "koishi": "^4.16.6"
+  },
+  "devDependencies": {
+    "@koishijs/client": "^5.23.1",
+    "@koishijs/plugin-console": "5.25.6",
+    "@types/node": "^18.19.8",
+    "esbuild": "^0.14.54",
+    "esbuild-register": "^3.5.0",
+    "koishi": "4.16.6",
+    "typescript": "^4.9.5"
+  }
+}

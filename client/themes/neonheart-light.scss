@@ -1,0 +1,95 @@
+:root,
+.theme-root {
+  &[theme=neonheart-light] {
+    --bg1: transparent;
+    --bg3: #a368c1;
+
+    --k-card-bg: var(--bg1);
+    --k-main-bg: var(--bg1);
+    --k-side-bg: transparent;
+    --k-page-bg: var(--bg3);
+    --k-activity-bg: transparent;
+
+    --k-color-divider: rgb(143, 0, 143);
+
+    @mixin apply-color($name, $base) {
+      --k-color-#{$name}: #{$base};
+      --k-color-#{$name}-shade: #{mix($base, #000, 90%)};
+      --k-color-#{$name}-tint: #{mix($base, #fff, 80%)};
+      --k-color-#{$name}-fade: #{fade-out($base, 0.9)};
+    }
+
+    @include apply-color(primary, rgb(255, 105, 185));
+
+
+    @mixin hover-effect($shadowColor) {
+      &:hover {
+        box-shadow: 0 0 10px $shadowColor,
+          1px 0 15px $shadowColor,
+          -1px 0 20px $shadowColor;
+      }
+    }
+
+    html {
+      transition: all, 400ms;
+    }
+
+    body {
+      color: white;
+      text-shadow: 0 0 20px deeppink;
+      background: linear-gradient(45deg, #ff9bd7, #12b0b0, #c182ff);
+
+      .choice,
+      .k-card {
+        border: 2px solid #c297ff;
+        @include hover-effect(cyan);
+      }
+    }
+
+    .el-input__inner,
+    .el-tree,
+    .el-button,
+    .el-icon,
+    .button>.inner,
+    .el-progress__text {
+      color: white;
+      text-shadow: 0 0 5px #ff33ff,
+        0 0 10px rgb(255, 89, 116),
+        0 0 15px rgb(251, 0, 42);
+    }
+
+    .el-button {
+      background-color: #a368c1;
+
+      &:hover {
+        background-color: #ff33ff;
+        color: white;
+      }
+    }
+
+    .el-button--primary {
+      background-color: blue;
+
+      &:hover {
+        background-color: #ff33ff;
+      }
+    }
+
+
+    .search-box {
+      border: 1px solid pink;
+    }
+
+    .search-word {
+      background-color: purple;
+    }
+
+    .search-container {
+      input {
+        &::placeholder {
+          color: pink;
+        }
+      }
+    }
+  }
+}
