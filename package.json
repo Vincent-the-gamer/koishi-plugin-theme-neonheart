@@ -1,14 +1,14 @@
 {
   "name": "koishi-plugin-theme-neonheart",
   "description": "NeonHeart theme for Koishi console",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "files": [
     "lib",
     "dist"
   ],
-  "author": "Vince G",
+  "author": "Vincent-the-gamer <erxianqiaottjt@163.com>",
   "scripts": {
     "build": "tsc -b && koishi-console build"
   },

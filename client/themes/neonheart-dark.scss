@@ -55,6 +55,7 @@
     .el-tree,
     .el-button,
     .el-icon,
+    .k-icon,
     .button>.inner,
     .el-progress__text {
       color: white;
@@ -94,6 +95,21 @@
           color: pink;
         }
       }
+    }
+
+    .card-header {
+      color: rgb(255, 118, 191);
+    }
+
+    .k-horizontal-tab-item {
+      color: rgb(255, 173, 255);
+      &.active {
+        color: orange;
+      }
+    }
+
+    .k-menu-item {
+      background-color: rgb(145, 0, 77);
     }
   }
 }
